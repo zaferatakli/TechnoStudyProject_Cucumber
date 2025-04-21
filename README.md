@@ -18,17 +18,29 @@
 
 ## 📄 Project Description
 
-This project automates UI test cases for the [Techno Study](https://techno.study/) website using **Cucumber**, **TestNG**, **Selenium WebDriver**, and the **Page Object Model (POM)** design pattern.
+This project automates UI test cases for the [Techno Study](https://techno.study/) website using **Cucumber**, **TestNG**, **Selenium WebDriver**, and the **Page Object Model (POM)** design pattern. The project was developed collaboratively within an Agile environment, following a one-week sprint cycle.
+
+🌀 Throughout the sprint, we adhered to Scrum practices including:
+
+- **Daily Stand-up Meetings**
+- **Sprint Planning and Review Sessions**
+- **Backlog Grooming**
+- **Retrospective Meetings**
+
+These ceremonies helped us ensure regular communication, iterative development, and continuous feedback, which led to timely delivery of all defined test scenarios and user stories.
 
 📌 Key Features:
 
-- BDD structure with Cucumber (`.feature` files + step definitions)
-- Test execution management via TestNG
-- Parallel and cross-browser testing support
-- Modular and reusable test design via POM
-- Custom reporting with ExtentReports (configured via `extent.properties`)
+- ✅ **BDD structure with Cucumber** – Human-readable `.feature` files connected to step definitions for clear test flow.
+- ✅ **Test execution with TestNG** – Allows structured grouping, prioritization, and parallel test execution.
+- ✅ **Parallel and cross-browser support** – Ensures test robustness across Chrome, Firefox, and Edge.
+- ✅ **Modular architecture via POM** – Promotes reusability and clean separation of concerns for maintainable test code.
+- ✅ **Automated reports using ExtentReports** – Integrated through `extent.properties` for enhanced test visibility and stakeholder reporting.
+
+By combining automation best practices with Agile principles, the team delivered a scalable and maintainable test framework that can evolve with future project requirements.
 
 ---
+
 
 ## 🏗️ Project Structure
 
@@ -111,7 +123,7 @@ TechnoStudyProject_Cucumber/
 
 ## 🔗 GitHub Links
 
-📁 [Main Repository](https://github.com/TugbaKilic33/TechnoStudyProject)
+📁 [Main Repository](https://github.com/zaferatakli/TechnoStudyProject_Cucumber)
 
 👤 Contributors:
 
