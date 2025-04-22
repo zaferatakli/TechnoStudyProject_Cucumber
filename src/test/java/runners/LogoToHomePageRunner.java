@@ -6,6 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.*;
 import utilities.GWD;
 
+import java.time.LocalDateTime;
+
 @CucumberOptions(
         features = {"src/test/java/featureFiles/LogoToHomePage.feature"},
         glue = {"stepDefinitions"},
@@ -22,6 +24,8 @@ public class LogoToHomePageRunner extends AbstractTestNGCucumberTests {
     public static void writeExtendReport() {
         ExtentService.getInstance().setSystemInfo("Windows User Name", System.getProperty("user.name"));
         ExtentService.getInstance().setSystemInfo("Time Zone", System.getProperty("user.timezone"));
+        ExtentService.getInstance().setSystemInfo("Browser", GWD.threadBrowserName.get());
+        ExtentService.getInstance().setSystemInfo("Execution Date", LocalDateTime.now().toString());
         ExtentService.getInstance().setSystemInfo("User Name", "Bug Fathers");
         ExtentService.getInstance().setSystemInfo("Team Name", "Team#4");
         ExtentService.getInstance().setSystemInfo("Application Name", "TechnoStudy");

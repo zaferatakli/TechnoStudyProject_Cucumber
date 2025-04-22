@@ -11,8 +11,9 @@ import pages.DialogContent;
 import utilities.ConfigReader;
 import utilities.GWD;
 
-public class BookingSteps {
+import java.time.Duration;
 
+public class BookingSteps {
     DialogContent dc = new DialogContent();
 
     @Given("the user navigate the website")
@@ -22,7 +23,7 @@ public class BookingSteps {
 
     @And("the user accepts cookies")
     public void theUserAcceptsCookies() {
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.getWebElement("acceptCookiesButton")));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(dc.getWebElement("acceptCookiesButton")));
 
         try {
             if (dc.getWebElement("acceptCookiesButton").isDisplayed()) {
@@ -35,55 +36,63 @@ public class BookingSteps {
 
     @And("the Apply Now button is clearly visible")
     public void theButtonIsClearlyVisible() {
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.getWebElement("applyNowButton")));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(dc.getWebElement("applyNowButton")));
         Assert.assertTrue(dc.getWebElement("applyNowButton").isDisplayed());
     }
 
     @When("the user clicks the Apply Now button")
     public void theUserClicksTheButton() {
-        dc.myClick(dc.applyNowButton);
+        dc.action.moveToElement(dc.getWebElement("applyNowButton")).click().build().perform();
+        //dc.myClick(dc.getWebElement("applyNowButton"));
     }
 
     @Then("the application form page is displayed")
     public void theApplicationFormPageIsDisplayed() {
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.nameInput));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(dc.nameInput));
         Assert.assertTrue(dc.nameInput.isDisplayed());
     }
 
     @When("the user fills in the form with the following details:")
     public void theUserFillsInTheFormWithTheFollowingDetails() {
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.nameInput));
-        dc.mySendKeys(dc.nameInput, (ConfigReader.getProperty("nameInput")));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(dc.getWebElement("nameInput")));
+        dc.mySendKeys(dc.getWebElement("nameInput"), (ConfigReader.getProperty("name")));
 
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.emailInput));
-        dc.mySendKeys(dc.emailInput, (ConfigReader.getProperty("emailInput")));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(dc.getWebElement("emailInput")));
+        dc.mySendKeys(dc.getWebElement("emailInput"), (ConfigReader.getProperty("email")));
 
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.phoneInput));
-        dc.mySendKeys(dc.phoneInput, (ConfigReader.getProperty("phoneInput")));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(dc.getWebElement("phoneInput")));
+        dc.mySendKeys(dc.getWebElement("phoneInput"), (ConfigReader.getProperty("phoneNumber")));
 
-        Select selectCountry = new Select(dc.countrySelect);
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.countrySelect));
+        Select selectCountry = new Select(dc.getWebElement("countrySelect"));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(dc.getWebElement("countrySelect")));
         selectCountry.selectByVisibleText(ConfigReader.getProperty("country"));
 
-        Select selectCourse = new Select(dc.courseSelect);
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.courseSelect));
+        Select selectCourse = new Select(dc.getWebElement("courseSelect"));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(dc.getWebElement("courseSelect")));
         selectCourse.selectByVisibleText(ConfigReader.getProperty("course"));
 
-        Select selectHearAboutUsSelect = new Select(dc.hearAboutUsSelect);
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.hearAboutUsSelect));
+        Select selectHearAboutUsSelect = new Select(dc.getWebElement("hearAboutUsSelect"));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(dc.getWebElement("hearAboutUsSelect")));
         selectHearAboutUsSelect.selectByVisibleText(ConfigReader.getProperty("hearAboutUs"));
+    }
+
+    @And("the user click the terms of use checkbox")
+    public void theUserClickTheTermsOfUseCheckbox() {
+        GWD.getWait().until(ExpectedConditions.elementToBeClickable(dc.getWebElement("checkBox")));
+        dc.myClick(dc.getWebElement("checkBox"));
     }
 
     @And("the user clicks the Book a Call button")
     public void theUserClicksTheBookACallButton() {
-        dc.wait.until(ExpectedConditions.elementToBeClickable(dc.bookCallButton));
-        dc.myClick(dc.bookCallButton);
+        GWD.getWait().until(ExpectedConditions.elementToBeClickable(dc.getWebElement("bookCallButton")));
+        dc.myClick(dc.getWebElement("bookCallButton"));
     }
 
     @Then("a confirmation message is displayed")
     public void aConfirmationMessageIsDisplayed() {
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.thankYouMessage));
-        Assert.assertTrue(dc.thankYouMessage.isDisplayed());
+        dc.action.pause(Duration.ofSeconds(30)).build().perform();
+        GWD.getWait().until(ExpectedConditions.visibilityOf(dc.getWebElement("thankYouMessage")));
+        Assert.assertTrue(dc.getWebElement("thankYouMessage").isDisplayed());
     }
 }
 

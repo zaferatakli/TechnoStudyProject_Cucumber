@@ -54,11 +54,26 @@
             <version>2.0.17</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
             <version>1.10.1</version>
         </dependency>
+
+        <!--        pdf report-->
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.24</version> <!-- log'da görünen sürüm -->
+        </dependency>
+
+        <dependency>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>cucumber-pdf-report</artifactId>
+            <version>2.11.1</version>
+        </dependency>
+
 
     </dependencies>
 </project>

@@ -5,13 +5,15 @@
     <test name="ChromeParallelTests">
         <parameter name="BrowserType" value="chrome"/>
         <classes>
-            <class name="runners.LogoToHomePageRunner"/>
+            <class name="runners.BookingRunner"/>
+<!--            <class name="runners.LogoToHomePageRunner"/>-->
         </classes>
     </test>
     <test name="EdgeParallelTests">
         <parameter name="BrowserType" value="edge"/>
         <classes>
-            <class name="runners.LogoToHomePageRunner"/>
+            <class name="runners.BookingRunner"/>
+<!--            <class name="runners.LogoToHomePageRunner"/>-->
         </classes>
     </test>
 

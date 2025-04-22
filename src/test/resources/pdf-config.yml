@@ -1,0 +1,3 @@
+pdf:
+  font:
+    path: "src/test/resources/fonts/arial.ttf"
