@@ -20,7 +20,7 @@ public class GWD {
             String browser = threadBrowserName.get();
 
             if (browser == null) {
-                browser = "chrome"; // default tarayıcı
+                browser = "chrome";
             }
 
             switch (browser.toLowerCase()) {
