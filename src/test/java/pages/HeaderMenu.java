@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import utilities.ConfigReader;
 import utilities.GWD;
 
 public class HeaderMenu extends ParentPage {
@@ -88,17 +87,17 @@ public class HeaderMenu extends ParentPage {
         return null;
     }
     public void clickMenuItemAndReturn(WebElement menuItem, String getExpectedUrl) {
-        wait.until(ExpectedConditions.visibilityOf(menuItem));
-        wait.until(ExpectedConditions.elementToBeClickable(menuItem));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(menuItem));
+        GWD.getWait().until(ExpectedConditions.elementToBeClickable(menuItem));
         ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].scrollIntoView(true);", menuItem);
         ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].removeAttribute('target')", menuItem);
         ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].click();", menuItem);
 
-        wait.until(ExpectedConditions.urlToBe(GWD.getDriver().getCurrentUrl()));
+        GWD.getWait().until(ExpectedConditions.urlToBe(GWD.getDriver().getCurrentUrl()));
 
         Assert.assertEquals(GWD.getDriver().getCurrentUrl(), getExpectedUrl, "URL is not as expected after clicking the menu item");
 
-        wait.until(ExpectedConditions.visibilityOf(getWebElement("logo")));
-        wait.until(ExpectedConditions.elementToBeClickable(getWebElement("logo")));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(getWebElement("logo")));
+        GWD.getWait().until(ExpectedConditions.elementToBeClickable(getWebElement("logo")));
     }
 }

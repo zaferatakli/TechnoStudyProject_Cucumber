@@ -30,7 +30,7 @@ public class LogoToHomePageSteps {
 
     @And("The user accepts cookies")
     public void theUserAcceptsCookies() {
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.getWebElement("acceptCookiesButton")));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(dc.getWebElement("acceptCookiesButton")));
 
         try {
             if (dc.getWebElement("acceptCookiesButton").isDisplayed()) {
@@ -43,7 +43,7 @@ public class LogoToHomePageSteps {
 
     @And("The logo should be visible and clickable")
     public void theLogoShouldBeVisibleAndClickable() {
-        hm.wait.until(ExpectedConditions.elementToBeClickable(hm.getWebElement("logo")));
+        GWD.getWait().until(ExpectedConditions.elementToBeClickable(hm.getWebElement("logo")));
         Assert.assertTrue(hm.getWebElement("logo").isDisplayed(), "Logo is not displayed");
     }
 
@@ -54,7 +54,7 @@ public class LogoToHomePageSteps {
 
     @Then("The user should be redirected to the homepage")
     public void theUserShouldBeRedirectedToTheHomepage() {
-        hm.wait.until(ExpectedConditions.urlToBe(expectedUrl));
+        GWD.getWait().until(ExpectedConditions.urlToBe(expectedUrl));
         Assert.assertEquals(GWD.getDriver().getCurrentUrl(), expectedUrl, "URL is not as expected after clicking the logo");
     }
 
@@ -67,7 +67,7 @@ public class LogoToHomePageSteps {
     @And("The user should return to the homepage by clicking the logo")
     public void theUserShouldReturnToTheHomepageByClickingTheLogo() {
         hm.action.moveToElement(hm.getWebElement("logo")).click().build().perform();
-        hm.wait.until(ExpectedConditions.urlToBe(ConfigReader.getProperty("homePageUrl")));
+        GWD.getWait().until(ExpectedConditions.urlToBe(ConfigReader.getProperty("homePageUrl")));
         Assert.assertEquals(GWD.getDriver().getCurrentUrl(), ConfigReader.getProperty("homePageUrl"), "URL is not as expected after clicking the logo again");
     }
 
@@ -163,7 +163,7 @@ public class LogoToHomePageSteps {
                         break;
                     }
                 }
-                hm.wait.until(ExpectedConditions.urlToBe(GWD.getDriver().getCurrentUrl()));
+                GWD.getWait().until(ExpectedConditions.urlToBe(GWD.getDriver().getCurrentUrl()));
 
                 GWD.getDriver().close();
                 GWD.getDriver().switchTo().window(mainWindow);
@@ -171,17 +171,17 @@ public class LogoToHomePageSteps {
                 ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].removeAttribute('target')", currentBlog);
                 hm.action.moveToElement(currentBlog).click().build().perform();
             }
-            hm.wait.until(ExpectedConditions.urlToBe(GWD.getDriver().getCurrentUrl()));
-            hm.wait.until(ExpectedConditions.visibilityOf(hm.getWebElement("logo")));
-            hm.wait.until(ExpectedConditions.elementToBeClickable(hm.getWebElement("logo")));
+            GWD.getWait().until(ExpectedConditions.urlToBe(GWD.getDriver().getCurrentUrl()));
+            GWD.getWait().until(ExpectedConditions.visibilityOf(hm.getWebElement("logo")));
+            GWD.getWait().until(ExpectedConditions.elementToBeClickable(hm.getWebElement("logo")));
             Assert.assertTrue(hm.getWebElement("logo").isDisplayed(), "Logo is not displayed");
             hm.myClick(hm.getWebElement("logo"));
 
-            hm.wait.until(ExpectedConditions.urlToBe(expectedUrl));
+            GWD.getWait().until(ExpectedConditions.urlToBe(expectedUrl));
             Assert.assertEquals(GWD.getDriver().getCurrentUrl(), expectedUrl, "URL is not as expected after clicking the logo again");
 
             hm.action.moveToElement(hm.getWebElement("blogsLink")).click().build().perform();
-            hm.wait.until(ExpectedConditions.urlToBe(ConfigReader.getProperty("blogsUrl")));
+            GWD.getWait().until(ExpectedConditions.urlToBe(ConfigReader.getProperty("blogsUrl")));
             Assert.assertEquals(GWD.getDriver().getCurrentUrl(), ConfigReader.getProperty("blogsUrl"), "URL is not as expected after clicking the Blogs link");
         }
     }

@@ -3,18 +3,30 @@ package runners;
 import com.aventstack.extentreports.service.ExtentService;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.*;
+import utilities.GWD;
+
+import java.time.LocalDateTime;
 
 @CucumberOptions(
         features = {"src/test/java/featureFiles/Booking.feature"},
-        glue = {"StepDefinitions"},
+        glue = {"stepDefinitions"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
 public class BookingRunner extends AbstractTestNGCucumberTests {
+
+    @BeforeClass
+    @Parameters("BrowserType")
+    public static void setUp(String browserType) {
+        GWD.threadBrowserName.set(browserType);
+    }
+
     @AfterClass
     public static void writeExtendReport() {
         ExtentService.getInstance().setSystemInfo("Windows User Name", System.getProperty("user.name"));
         ExtentService.getInstance().setSystemInfo("Time Zone", System.getProperty("user.timezone"));
+        ExtentService.getInstance().setSystemInfo("Browser", GWD.threadBrowserName.get());
+        ExtentService.getInstance().setSystemInfo("Execution Date", LocalDateTime.now().toString());
         ExtentService.getInstance().setSystemInfo("User Name", "Bug Fathers");
         ExtentService.getInstance().setSystemInfo("Team Name", "Team#4");
         ExtentService.getInstance().setSystemInfo("Application Name", "TechnoStudy");

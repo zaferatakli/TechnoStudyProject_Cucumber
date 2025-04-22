@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SingleBrowserTestSuite" parallel="classes" thread-count="2">
+    <test name="ChromeSingleTests">
+        <parameter name="BrowserType" value="chrome"/>
+        <classes>
+            <class name="runners.BookingRunner"/>
+            <class name="runners.LogoToHomePageRunner"/>
+        </classes>
+    </test>
+</suite>

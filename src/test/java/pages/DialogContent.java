@@ -105,7 +105,7 @@ public class DialogContent extends ParentPage {
             case "cookiesPolicyLink":
                 return this.cookiesPolicyLink;
             case "acceptCookiesButton":
-                return this.acceptCookiesButton; ///accept cookies button
+                return this.acceptCookiesButton;
         }
         return null;
     }
@@ -113,7 +113,6 @@ public class DialogContent extends ParentPage {
         switch (strElement) {
             case "blogsList":
                 return this.blogsList;
-            // İleride başka liste elemanları eklersen buraya yazabilirsin.
         }
         return null;
     }
