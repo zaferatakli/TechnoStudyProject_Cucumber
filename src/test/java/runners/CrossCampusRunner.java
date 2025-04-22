@@ -4,16 +4,25 @@ import com.aventstack.extentreports.service.ExtentService;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import utilities.GWD;
 
 import java.time.LocalDateTime;
 
 @CucumberOptions(
         features = {"src/test/java/featureFiles/CrossCampus.feature"},
-        glue = {"StepDefinitions"},
+        glue = {"stepDefinitions"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
 public class CrossCampusRunner extends AbstractTestNGCucumberTests {
+
+    @BeforeClass
+    @Parameters("BrowserType")
+    public static void setUp(String browserType) {
+        GWD.threadBrowserName.set(browserType);
+    }
+
     @AfterClass
     public static void writeExtendReport() {
         ExtentService.getInstance().setSystemInfo("Windows User Name", System.getProperty("user.name"));
