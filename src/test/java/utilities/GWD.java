@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.Locale;
@@ -35,8 +36,13 @@ public class GWD {
             }
             threadDriver.get().manage().window().maximize();
             threadDriver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+
         }
         return threadDriver.get();
+    }
+
+    public static WebDriverWait getWait() {
+        return new WebDriverWait(getDriver(), Duration.ofSeconds(20));
     }
 
     public static void quitDriver() {
