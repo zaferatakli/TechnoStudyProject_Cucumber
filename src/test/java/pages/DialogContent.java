@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
@@ -8,9 +9,11 @@ import utilities.GWD;
 import java.util.List;
 
 public class DialogContent extends ParentPage {
+    public Actions action;
 
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
+        this.action = new Actions(GWD.getDriver());
     }
 
     /// TC_503_Elements
@@ -103,9 +106,14 @@ public class DialogContent extends ParentPage {
                 return this.cookiesPolicyLink;
             case "acceptCookiesButton":
                 return this.acceptCookiesButton; ///accept cookies button
+        }
+        return null;
+    }
+    public List<WebElement> getWebElementList(String strElement) {
+        switch (strElement) {
             case "blogsList":
-                return (WebElement) this.blogsList;
-
+                return this.blogsList;
+            // İleride başka liste elemanları eklersen buraya yazabilirsin.
         }
         return null;
     }

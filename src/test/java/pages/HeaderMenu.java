@@ -1,14 +1,21 @@
 package pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
+import utilities.ConfigReader;
 import utilities.GWD;
 
-public class HeaderMenu extends ParentPage{
+public class HeaderMenu extends ParentPage {
+    public Actions action;
 
     public HeaderMenu() {
         PageFactory.initElements(GWD.getDriver(), this);
+        this.action = new Actions(GWD.getDriver());
     }
 
     /// TC_506_Elements⭐⭐⭐
@@ -42,24 +49,17 @@ public class HeaderMenu extends ParentPage{
     ///master's Program link programs alt menu
 
     @FindBy(xpath = "//li[@class='t228__list_item']//a[text()='About Us']")
-    public WebElement aboutUsLink; ///ana menu about us
+    public WebElement aboutUsLink;
+    ///ana menu about us
 
     @FindBy(xpath = "//li[@class='t228__list_item']//a[text()='Work With Us']")
-    public WebElement workWithUsLink; ///ana menu work with us
+    public WebElement workWithUsLink;
+    ///ana menu work with us
 
     @FindBy(xpath = "//li[@class='t228__list_item']//a[text()='Blogs']")
-    public WebElement blogsLink; ///ana menu blogs
+    public WebElement blogsLink;
 
-
-
-
-
-
-
-
-
-
-
+    ///ana menu blogs
 
 
     public WebElement getWebElement(String strElement) {
@@ -86,5 +86,19 @@ public class HeaderMenu extends ParentPage{
                 return this.blogsLink;
         }
         return null;
+    }
+    public void clickMenuItemAndReturn(WebElement menuItem, String getExpectedUrl) {
+        wait.until(ExpectedConditions.visibilityOf(menuItem));
+        wait.until(ExpectedConditions.elementToBeClickable(menuItem));
+        ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].scrollIntoView(true);", menuItem);
+        ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].removeAttribute('target')", menuItem);
+        ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].click();", menuItem);
+
+        wait.until(ExpectedConditions.urlToBe(GWD.getDriver().getCurrentUrl()));
+
+        Assert.assertEquals(GWD.getDriver().getCurrentUrl(), getExpectedUrl, "URL is not as expected after clicking the menu item");
+
+        wait.until(ExpectedConditions.visibilityOf(getWebElement("logo")));
+        wait.until(ExpectedConditions.elementToBeClickable(getWebElement("logo")));
     }
 }

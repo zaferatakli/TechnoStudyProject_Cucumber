@@ -1,13 +1,31 @@
 package runners;
 
+import com.aventstack.extentreports.service.ExtentService;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.*;
+import utilities.GWD;
 
 @CucumberOptions(
         features = {"src/test/java/featureFiles/LogoToHomePage.feature"},
-        glue = {"StepDefinitions"},
+        glue = {"stepDefinitions"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
 public class LogoToHomePageRunner extends AbstractTestNGCucumberTests {
+    @BeforeClass
+    @Parameters("BrowserType")
+    public static void setUp(String browserType) {
+        GWD.threadBrowserName.set(browserType);
+    }
 
+    @AfterClass
+    public static void writeExtendReport() {
+        ExtentService.getInstance().setSystemInfo("Windows User Name", System.getProperty("user.name"));
+        ExtentService.getInstance().setSystemInfo("Time Zone", System.getProperty("user.timezone"));
+        ExtentService.getInstance().setSystemInfo("User Name", "Bug Fathers");
+        ExtentService.getInstance().setSystemInfo("Team Name", "Team#4");
+        ExtentService.getInstance().setSystemInfo("Application Name", "TechnoStudy");
+        ExtentService.getInstance().setSystemInfo("Operating System Info", System.getProperty("os.name"));
+        ExtentService.getInstance().setSystemInfo("Department", "QA");
+    }
 }
