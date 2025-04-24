@@ -95,7 +95,7 @@ TechnoStudyProject_Cucumber/
 | US_508     | "Terms of Use" page loads and displays correctly                | ❌ Failed  |
 
 
-### ❌* US_508 - "Terms of Use" page failed due to a missing element. The test case is currently under review and will be updated in the next sprint.
+### ❌ **US_508 - "Terms of Use" page failed due to a missing element. The test case is currently under review and will be updated in the next sprint.**
 
 
 ---
