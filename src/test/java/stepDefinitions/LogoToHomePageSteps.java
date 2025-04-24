@@ -1,9 +1,6 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -140,50 +137,47 @@ public class LogoToHomePageSteps {
         hm.clickMenuItemAndReturn(hm.getWebElement("blogsLink"), ConfigReader.getProperty("blogsUrl"));
     }
 
-    @Then("The user clicks each of the all blog posts and verifies the page loads correctly")
-    public void theUserClicksEachOfTheAllBlogPostsAndVerifiesThePageLoadsCorrectly() {
+    @Then("The user clicks each of the all blog posts as {int} and verifies the page loads correctly")
+    public void theUserClicksEachOfTheAllBlogPostsAsIndexAndVerifiesThePageLoadsCorrectly(int index) {
+        GWD.getWait().until(ExpectedConditions.urlToBe(ConfigReader.getProperty("blogsUrl")));
+        GWD.getWait().until(ExpectedConditions.visibilityOfAllElements(dc.getWebElementList("blogsList")));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(hm.getWebElement("logo")));
+
         List<WebElement> blogsPageList = dc.getWebElementList("blogsList");
         String mainWindow = GWD.getDriver().getWindowHandle();
 
-        for (int i = 1; i < blogsPageList.size(); i++) {
-            blogsPageList = dc.getWebElementList("blogsList");
+        if (index <= 0 || index > blogsPageList.size()) {
+            Assert.fail("Not in the given index blogs list: " + index);
+        }
 
-            if (i >= blogsPageList.size()) {
-                break;
-            }
+        WebElement currentBlog = blogsPageList.get(index - 1);
 
-            WebElement currentBlog = blogsPageList.get(i);
+        if (index == 19 || index == 20 || index == 21) {
+            dc.action.moveToElement(currentBlog).click().build().perform();
 
-            if (i == 19 || i == 20 || i == 21) {
-                dc.action.moveToElement(currentBlog).click().build().perform();
-
-                for (String windowHandle : GWD.getDriver().getWindowHandles()) {
-                    if (!windowHandle.equals(mainWindow)) {
-                        GWD.getDriver().switchTo().window(windowHandle);
-                        break;
-                    }
+            for (String windowHandle : GWD.getDriver().getWindowHandles()) {
+                if (!windowHandle.equals(mainWindow)) {
+                    GWD.getDriver().switchTo().window(windowHandle);
+                    break;
                 }
-                GWD.getWait().until(ExpectedConditions.urlToBe(GWD.getDriver().getCurrentUrl()));
-
-                GWD.getDriver().close();
-                GWD.getDriver().switchTo().window(mainWindow);
-            } else {
-                ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].removeAttribute('target')", currentBlog);
-                hm.action.moveToElement(currentBlog).click().build().perform();
             }
             GWD.getWait().until(ExpectedConditions.urlToBe(GWD.getDriver().getCurrentUrl()));
             GWD.getWait().until(ExpectedConditions.visibilityOf(hm.getWebElement("logo")));
-            GWD.getWait().until(ExpectedConditions.elementToBeClickable(hm.getWebElement("logo")));
-            Assert.assertTrue(hm.getWebElement("logo").isDisplayed(), "Logo is not displayed");
-            hm.myClick(hm.getWebElement("logo"));
-
-            GWD.getWait().until(ExpectedConditions.urlToBe(expectedUrl));
-            Assert.assertEquals(GWD.getDriver().getCurrentUrl(), expectedUrl, "URL is not as expected after clicking the logo again");
-
-            hm.action.moveToElement(hm.getWebElement("blogsLink")).click().build().perform();
-            GWD.getWait().until(ExpectedConditions.urlToBe(ConfigReader.getProperty("blogsUrl")));
-            Assert.assertEquals(GWD.getDriver().getCurrentUrl(), ConfigReader.getProperty("blogsUrl"), "URL is not as expected after clicking the Blogs link");
+            GWD.getDriver().close();
+            GWD.getDriver().switchTo().window(mainWindow);
+        } else {
+            ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].removeAttribute('target')", currentBlog);
+            dc.action.moveToElement(currentBlog).click().build().perform();
+            GWD.getWait().until(ExpectedConditions.visibilityOf(hm.getWebElement("logo")));
         }
+
+        GWD.getWait().until(ExpectedConditions.visibilityOf(hm.getWebElement("logo")));
+        GWD.getWait().until(ExpectedConditions.elementToBeClickable(hm.getWebElement("logo")));
+        Assert.assertTrue(hm.getWebElement("logo").isDisplayed(), "Logo is not displayed");
+        hm.myClick(hm.getWebElement("logo"));
+
+        GWD.getWait().until(ExpectedConditions.urlToBe(expectedUrl));
+        Assert.assertEquals(GWD.getDriver().getCurrentUrl(), expectedUrl, "URL is not as expected after clicking the logo again");
     }
 
     @And("The user should return to the homepage by clicking the logo after each blog check")

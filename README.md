@@ -63,32 +63,40 @@ TechnoStudyProject_Cucumber/
 
 ## 🧰 Technologies Used
 
-| Technology / Tool                  | Description                                              |
-|-----------------------------------|----------------------------------------------------------|
-| **Java 22**                       | Programming language                                     |
-| **Selenium WebDriver 4.31.0**     | Browser automation framework                             |
-| **Cucumber 7.22.0**               | BDD testing framework                                    |
-| **TestNG 7.11.0**                 | Test configuration and execution                         |
-| **ExtentReports Adapter**         | Visual test reporting tool                               |
-| **Apache Commons Lang 3.12.0**    | Utility functions                                        |
-| **SLF4J NOP 2.0.17**              | Logging configuration                                    |
-| **Maven**                         | Dependency and project management                        |
+| Technology / Tool                         | Description                                                    |
+|------------------------------------------|----------------------------------------------------------------|
+| **Java 22**                              | Programming language                                            |
+| **Selenium WebDriver 4.31.0**            | Browser automation framework                                   |
+| **Cucumber 7.22.0**                      | BDD testing framework                                          |
+| **TestNG 7.11.0**                        | Test configuration and execution                               |
+| **ExtentReports Cucumber7 Adapter 1.10.1**| Visual HTML report integration for Cucumber                    |
+| **Apache Commons Lang 3.12.0**           | Utility functions for easier string/number operations          |
+| **SLF4J NOP 2.0.17**                     | Logging configuration without actual logging output            |
+| **Apache PDFBox 2.0.24**                 | PDF file generation (used for PDF reporting)                   |
+| **Cucumber PDF Report 2.11.1**           | Generates PDF reports for Cucumber test results                |
+| **Log4j API & Core 2.20.0**              | Logging framework used for debugging and runtime monitoring    |
+| **Maven**                                | Dependency and project management tool                         |
+
 
 ---
 
 
 ## 🧪 User Stories & Test Scenarios
 
-| User Story | Description                                                    | Status     |
-|------------|----------------------------------------------------------------|------------|
-| US_501     | Access courses via dropdown menu                               | ✅ Passed  |
-| US_502     | "Sign In" redirects to Campus login                            | ✅ Passed  |
-| US_503     | Submit application form                                        | ✅ Passed  |
-| US_504     | Access the Blog page                                           | ✅ Passed  |
-| US_505     | Access social media via footer links                           | ✅ Passed  |
-| US_506     | Click on logo redirects to homepage                            | ✅ Passed  |
-| US_507     | "Learn More" opens correct course detail                       | ✅ Passed  |
-| US_508     | "Terms of Use" page loads and displays correctly               | ✅ Passed  |
+| User Story | Description                                                     | Status     |
+|------------|-----------------------------------------------------------------|------------|
+| US_501     | Access courses via dropdown menu                                | ✅ Passed  |
+| US_502     | "Sign In" redirects to Campus login                             | ✅ Passed  |
+| US_503     | Submit application form                                         | ✅ Passed  |
+| US_504     | Access the Blog page                                            | ✅ Passed  |
+| US_505     | Access social media via footer links                            | ✅ Passed  |
+| US_506     | Click on logo redirects to homepage                             | ✅ Passed  |
+| US_507     | "Learn More" opens correct course detail                        | ✅ Passed  |
+| US_508     | "Terms of Use" page loads and displays correctly                | ❌ Failed  |
+
+
+### ❌* US_508 - "Terms of Use" page failed due to a missing element. The test case is currently under review and will be updated in the next sprint.
+
 
 ---
 

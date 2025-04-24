@@ -1,8 +1,10 @@
 Feature: Techno Study - Homepage and Menu Navigation Test
 
-  Scenario: First load - verify homepage and accept cookies
+  Background:
     Given The user navigates to the homepage
     And The user accepts cookies
+
+  Scenario: First load - verify homepage and accept cookies
     And The logo should be visible and clickable
 
     When The user clicks on the Logo
@@ -49,7 +51,7 @@ Feature: Techno Study - Homepage and Menu Navigation Test
 
   Scenario Outline: User clicks on each blog post and returns to homepage
     When The user clicks on the Blogs link
-    Then The user clicks each of the all blog posts <index> and verifies the page loads correctly
+    Then The user clicks each of the all blog posts as <index> and verifies the page loads correctly
     And The user should return to the homepage by clicking the logo after each blog check
     Examples:
       | index |
