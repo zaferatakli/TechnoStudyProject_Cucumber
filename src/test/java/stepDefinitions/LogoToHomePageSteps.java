@@ -27,11 +27,11 @@ public class LogoToHomePageSteps {
 
     @And("The user accepts cookies")
     public void theUserAcceptsCookies() {
-        GWD.getWait().until(ExpectedConditions.visibilityOf(dc.getWebElement("acceptCookiesButton")));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(dc.acceptCookiesButton));
 
         try {
-            if (dc.getWebElement("acceptCookiesButton").isDisplayed()) {
-                dc.myClick(dc.getWebElement("acceptCookiesButton"));
+            if (dc.acceptCookiesButton.isDisplayed()) {
+                dc.myClick(dc.acceptCookiesButton);
             }
         } catch (Exception e) {
             System.out.println("Accept Cookies button not displayed");
@@ -40,13 +40,13 @@ public class LogoToHomePageSteps {
 
     @And("The logo should be visible and clickable")
     public void theLogoShouldBeVisibleAndClickable() {
-        GWD.getWait().until(ExpectedConditions.elementToBeClickable(hm.getWebElement("logo")));
-        Assert.assertTrue(hm.getWebElement("logo").isDisplayed(), "Logo is not displayed");
+        GWD.getWait().until(ExpectedConditions.elementToBeClickable(hm.logo));
+        Assert.assertTrue(hm.logo.isDisplayed(), "Logo is not displayed");
     }
 
     @When("The user clicks on the Logo")
     public void theUserClicksOnTheLogo() {
-        hm.myClick(hm.getWebElement("logo"));
+        hm.myClick(hm.logo);
     }
 
     @Then("The user should be redirected to the homepage")
@@ -57,91 +57,91 @@ public class LogoToHomePageSteps {
 
     @Then("The user clicks on the Programs > SDET link and should be redirected to the correct page")
     public void theUserClicksOnTheProgramsSDETLinkAndShouldBeRedirectedToTheCorrectPage() {
-        hm.action.moveToElement(hm.getWebElement("programs")).build().perform();
-        hm.clickMenuItemAndReturn(hm.getWebElement("sdetLink"), ConfigReader.getProperty("sdetUrl"));
+        hm.action.moveToElement(hm.programs).build().perform();
+        hm.clickMenuItemAndReturn(hm.sdetLink, ConfigReader.getProperty("sdetUrl"));
     }
 
     @And("The user should return to the homepage by clicking the logo")
     public void theUserShouldReturnToTheHomepageByClickingTheLogo() {
-        hm.action.moveToElement(hm.getWebElement("logo")).click().build().perform();
+        hm.action.moveToElement(hm.logo).click().build().perform();
         GWD.getWait().until(ExpectedConditions.urlToBe(ConfigReader.getProperty("homePageUrl")));
         Assert.assertEquals(GWD.getDriver().getCurrentUrl(), ConfigReader.getProperty("homePageUrl"), "URL is not as expected after clicking the logo again");
     }
 
     @Then("The user clicks on the Programs > Data Science link and should be redirected to the correct page")
     public void theUserClicksOnTheProgramsDataScienceLinkAndShouldBeRedirectedToTheCorrectPage() {
-        hm.action.moveToElement(hm.getWebElement("programs")).build().perform();
-        hm.clickMenuItemAndReturn(hm.getWebElement("dataScienceLink"), ConfigReader.getProperty("dataScienceUrl"));
+        hm.action.moveToElement(hm.programs).build().perform();
+        hm.clickMenuItemAndReturn(hm.dataScienceLink, ConfigReader.getProperty("dataScienceUrl"));
     }
 
     @Then("The user clicks on the Programs > AI link and should be redirected to the correct page")
     public void theUserClicksOnTheProgramsAILinkAndShouldBeRedirectedToTheCorrectPage() {
-        hm.action.moveToElement(hm.getWebElement("programs")).build().perform();
-        hm.clickMenuItemAndReturn(hm.getWebElement("artificialIntelligenceLink"), ConfigReader.getProperty("artificialIntelligenceUrl"));
+        hm.action.moveToElement(hm.programs).build().perform();
+        hm.clickMenuItemAndReturn(hm.artificialIntelligenceLink, ConfigReader.getProperty("artificialIntelligenceUrl"));
     }
 
     @Then("The user clicks on the Programs > Android Developer link and should be redirected to the correct page")
     public void theUserClicksOnTheProgramsAndroidDeveloperLinkAndShouldBeRedirectedToTheCorrectPage() {
-        hm.action.moveToElement(hm.getWebElement("programs")).build().perform();
-        hm.clickMenuItemAndReturn(hm.getWebElement("androidDeveloperLink"), ConfigReader.getProperty("androidDeveloperUrl"));
+        hm.action.moveToElement(hm.programs).build().perform();
+        hm.clickMenuItemAndReturn(hm.androidDeveloperLink, ConfigReader.getProperty("androidDeveloperUrl"));
     }
 
     @Then("The user clicks on the Programs > Masters Program link and should be redirected to the correct page")
     public void theUserClicksOnTheProgramsMastersProgramLinkAndShouldBeRedirectedToTheCorrectPage() {
-        hm.action.moveToElement(hm.getWebElement("programs")).build().perform();
-        hm.clickMenuItemAndReturn(hm.getWebElement("mastersProgramLink"), ConfigReader.getProperty("mastersProgramUrl"));
+        hm.action.moveToElement(hm.programs).build().perform();
+        hm.clickMenuItemAndReturn(hm.mastersProgramLink, ConfigReader.getProperty("mastersProgramUrl"));
     }
 
     @Then("The user clicks on the About Us link and should be redirected to the correct page")
     public void theUserClicksOnTheAboutUsLinkAndShouldBeRedirectedToTheCorrectPage() {
-        hm.clickMenuItemAndReturn(hm.getWebElement("aboutUsLink"), ConfigReader.getProperty("aboutUsUrl"));
+        hm.clickMenuItemAndReturn(hm.aboutUsLink, ConfigReader.getProperty("aboutUsUrl"));
     }
 
     @Then("The user clicks on the Work With Us link and should be redirected to the correct page")
     public void theUserClicksOnTheWorkWithUsLinkAndShouldBeRedirectedToTheCorrectPage() {
-        hm.clickMenuItemAndReturn(hm.getWebElement("workWithUsLink"), ConfigReader.getProperty("workWithUsUrl"));
+        hm.clickMenuItemAndReturn(hm.workWithUsLink, ConfigReader.getProperty("workWithUsUrl"));
     }
 
     @Then("The user clicks on the Apply Now button and should be redirected to the correct page")
     public void theUserClicksOnTheApplyNowButtonAndShouldBeRedirectedToTheCorrectPage() {
-        hm.clickMenuItemAndReturn(dc.getWebElement("applyNowButton"), ConfigReader.getProperty("applyNowUrl"));
+        hm.clickMenuItemAndReturn(dc.applyNowButton, ConfigReader.getProperty("applyNowUrl"));
     }
 
     @Then("The user clicks on the Coding Bootcamp link and should be redirected to the correct page")
     public void theUserClicksOnTheCodingBootcampLinkAndShouldBeRedirectedToTheCorrectPage() {
-        hm.clickMenuItemAndReturn(dc.getWebElement("codingBootcampLink"), ConfigReader.getProperty("codingBootcampUrl"));
+        hm.clickMenuItemAndReturn(dc.codingBootcampLink, ConfigReader.getProperty("codingBootcampUrl"));
     }
 
     @When("The user scrolls down the page")
     public void theUserScrollsDownThePage() {
-        hm.scrollToElement(dc.getWebElement("termsOfUseLink"));
+        hm.scrollToElement(dc.termsOfUseLink);
     }
 
     @Then("The user clicks on the Terms of Use link and should be redirected to the correct page")
     public void theUserClicksOnTheTermsOfUseLinkAndShouldBeRedirectedToTheCorrectPage() {
-        hm.clickMenuItemAndReturn(dc.getWebElement("termsOfUseLink"), ConfigReader.getProperty("termsOfUseUrl"));
+        hm.clickMenuItemAndReturn(dc.termsOfUseLink, ConfigReader.getProperty("termsOfUseUrl"));
     }
 
     @Then("The user clicks on the Privacy Policy link and should be redirected to the correct page")
     public void theUserClicksOnThePrivacyPolicyLinkAndShouldBeRedirectedToTheCorrectPage() {
-        hm.clickMenuItemAndReturn(dc.getWebElement("privacyPolicyLink"), ConfigReader.getProperty("privacyPolicyUrl"));
+        hm.clickMenuItemAndReturn(dc.privacyPolicyLink, ConfigReader.getProperty("privacyPolicyUrl"));
     }
 
     @Then("The user clicks on the Cookies Policy link and should be redirected to the correct page")
     public void theUserClicksOnTheCookiesPolicyLinkAndShouldBeRedirectedToTheCorrectPage() {
-        hm.clickMenuItemAndReturn(dc.getWebElement("cookiesPolicyLink"), ConfigReader.getProperty("cookiesPolicyUrl"));
+        hm.clickMenuItemAndReturn(dc.cookiesPolicyLink, ConfigReader.getProperty("cookiesPolicyUrl"));
     }
 
     @When("The user clicks on the Blogs link")
     public void theUserClicksOnTheBlogsLink() {
-        hm.clickMenuItemAndReturn(hm.getWebElement("blogsLink"), ConfigReader.getProperty("blogsUrl"));
+        hm.clickMenuItemAndReturn(hm.blogsLink, ConfigReader.getProperty("blogsUrl"));
     }
 
     @Then("The user clicks each of the all blog posts as {int} and verifies the page loads correctly")
     public void theUserClicksEachOfTheAllBlogPostsAsIndexAndVerifiesThePageLoadsCorrectly(int index) {
         GWD.getWait().until(ExpectedConditions.urlToBe(ConfigReader.getProperty("blogsUrl")));
         GWD.getWait().until(ExpectedConditions.visibilityOfAllElements(dc.getWebElementList("blogsList")));
-        GWD.getWait().until(ExpectedConditions.visibilityOf(hm.getWebElement("logo")));
+        GWD.getWait().until(ExpectedConditions.visibilityOf(hm.logo));
 
         List<WebElement> blogsPageList = dc.getWebElementList("blogsList");
         String mainWindow = GWD.getDriver().getWindowHandle();
@@ -162,19 +162,18 @@ public class LogoToHomePageSteps {
                 }
             }
             GWD.getWait().until(ExpectedConditions.urlToBe(GWD.getDriver().getCurrentUrl()));
-            GWD.getWait().until(ExpectedConditions.visibilityOf(hm.getWebElement("logo")));
+            GWD.getWait().until(ExpectedConditions.visibilityOf(hm.logo));
             GWD.getDriver().close();
             GWD.getDriver().switchTo().window(mainWindow);
         } else {
             ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].removeAttribute('target')", currentBlog);
             dc.action.moveToElement(currentBlog).click().build().perform();
-            GWD.getWait().until(ExpectedConditions.visibilityOf(hm.getWebElement("logo")));
+            GWD.getWait().until(ExpectedConditions.visibilityOf(hm.logo));
         }
 
-        GWD.getWait().until(ExpectedConditions.visibilityOf(hm.getWebElement("logo")));
-        GWD.getWait().until(ExpectedConditions.elementToBeClickable(hm.getWebElement("logo")));
-        Assert.assertTrue(hm.getWebElement("logo").isDisplayed(), "Logo is not displayed");
-        hm.myClick(hm.getWebElement("logo"));
+        GWD.getWait().until(ExpectedConditions.elementToBeClickable(hm.logo));
+        Assert.assertTrue(hm.logo.isDisplayed(), "Logo is not displayed");
+        hm.myClick(hm.logo);
 
         GWD.getWait().until(ExpectedConditions.urlToBe(expectedUrl));
         Assert.assertEquals(GWD.getDriver().getCurrentUrl(), expectedUrl, "URL is not as expected after clicking the logo again");
@@ -182,6 +181,14 @@ public class LogoToHomePageSteps {
 
     @And("The user should return to the homepage by clicking the logo after each blog check")
     public void theUserShouldReturnToTheHomepageByClickingTheLogoAfterEachBlogCheck() {
-        hm.clickMenuItemAndReturn(hm.getWebElement("logo"), ConfigReader.getProperty("homePageUrl"));
+        String currentUrl = GWD.getDriver().getCurrentUrl();
+        String homePageUrl = ConfigReader.getProperty("homePageUrl");
+
+        if (!currentUrl.equals(homePageUrl)) {
+            hm.myClick(hm.logo);
+            GWD.getWait().until(ExpectedConditions.urlToBe(homePageUrl));
+            Assert.assertEquals(GWD.getDriver().getCurrentUrl(), homePageUrl, "URL is not as expected after clicking the logo again");
+        }
+        //hm.clickMenuItemAndReturn(hm.logo, ConfigReader.getProperty("homePageUrl"));
     }
 }

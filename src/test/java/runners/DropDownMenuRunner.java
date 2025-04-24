@@ -9,7 +9,7 @@ import utilities.GWD;
 import java.time.LocalDateTime;
 
 @CucumberOptions(
-        features = {"src/test/java/featureFiles/DropdownMenu.feature"},
+        features = {"src/test/java/featureFiles/DropDownMenu.feature"},
         glue = {"stepDefinitions"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 

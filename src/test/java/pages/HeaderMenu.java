@@ -65,50 +65,35 @@ public class HeaderMenu extends ParentPage {
     @FindBy(xpath = "//img")
     public WebElement campusPageLogo;
 
-
-
-
-    public WebElement getWebElement(String strElement) {
-        switch (strElement) {
-            case "logo":
-                return this.logo;
-            case "programs":
-                return this.programs;
-            case "sdetLink":
-                return this.sdetLink;
-            case "dataScienceLink":
-                return this.dataScienceLink;
-            case "artificialIntelligenceLink":
-                return this.artificialIntelligenceLink;
-            case "androidDeveloperLink":
-                return this.androidDeveloperLink;
-            case "mastersProgramLink":
-                return this.mastersProgramLink;
-            case "aboutUsLink":
-                return this.aboutUsLink;
-            case "workWithUsLink":
-                return this.workWithUsLink;
-            case "blogsLink":
-                return this.blogsLink;
-            case "signInButton":
-                return this.signInButton;
-            case "campusPageLogo":
-                return this.campusPageLogo;
-        }
-        return null;
-    }
     public void clickMenuItemAndReturn(WebElement menuItem, String getExpectedUrl) {
         GWD.getWait().until(ExpectedConditions.visibilityOf(menuItem));
         GWD.getWait().until(ExpectedConditions.elementToBeClickable(menuItem));
-        ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].scrollIntoView(true);", menuItem);
-        ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].removeAttribute('target')", menuItem);
-        ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].click();", menuItem);
 
-        GWD.getWait().until(ExpectedConditions.urlToBe(GWD.getDriver().getCurrentUrl()));
+        String currentUrl = GWD.getDriver().getCurrentUrl();
 
-        Assert.assertEquals(GWD.getDriver().getCurrentUrl(), getExpectedUrl, "URL is not as expected after clicking the menu item");
+        if (!currentUrl.equals(getExpectedUrl)) {
+            ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].scrollIntoView(true);", menuItem);
+            ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].removeAttribute('target')", menuItem);
+            ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].click();", menuItem);
 
-        GWD.getWait().until(ExpectedConditions.visibilityOf(getWebElement("logo")));
-        GWD.getWait().until(ExpectedConditions.elementToBeClickable(getWebElement("logo")));
+            GWD.getWait().until(ExpectedConditions.urlToBe(getExpectedUrl));
+            Assert.assertEquals(GWD.getDriver().getCurrentUrl(), getExpectedUrl, "URL is not as expected after clicking the menu item");
+        }
+
+        GWD.getWait().until(ExpectedConditions.visibilityOf(logo));
+        GWD.getWait().until(ExpectedConditions.elementToBeClickable(logo));
+
+//        GWD.getWait().until(ExpectedConditions.visibilityOf(menuItem));
+//        GWD.getWait().until(ExpectedConditions.elementToBeClickable(menuItem));
+//        ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].scrollIntoView(true);", menuItem);
+//        ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].removeAttribute('target')", menuItem);
+//        ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].click();", menuItem);
+//
+//        GWD.getWait().until(ExpectedConditions.urlToBe(GWD.getDriver().getCurrentUrl()));
+//
+//        Assert.assertEquals(GWD.getDriver().getCurrentUrl(), getExpectedUrl, "URL is not as expected after clicking the menu item");
+//
+//        GWD.getWait().until(ExpectedConditions.visibilityOf(logo));
+//        GWD.getWait().until(ExpectedConditions.elementToBeClickable(logo));
     }
 }
