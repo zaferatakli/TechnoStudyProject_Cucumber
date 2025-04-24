@@ -3,9 +3,7 @@ package runners;
 import com.aventstack.extentreports.service.ExtentService;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import utilities.GWD;
 
 import java.time.LocalDateTime;
@@ -25,6 +23,7 @@ public class CrossCampusRunner extends AbstractTestNGCucumberTests {
 
     @AfterClass
     public static void writeExtendReport() {
+        ExtentService.getInstance().setSystemInfo("--------------------", "--------------------");
         ExtentService.getInstance().setSystemInfo("Windows User Name", System.getProperty("user.name"));
         ExtentService.getInstance().setSystemInfo("Time Zone", System.getProperty("user.timezone"));
         ExtentService.getInstance().setSystemInfo("Browser", GWD.threadBrowserName.get());
@@ -32,6 +31,7 @@ public class CrossCampusRunner extends AbstractTestNGCucumberTests {
         ExtentService.getInstance().setSystemInfo("User Name", "Bug Fathers");
         ExtentService.getInstance().setSystemInfo("Team Name", "Team#4");
         ExtentService.getInstance().setSystemInfo("Application Name", "TechnoStudy");
+        ExtentService.getInstance().setSystemInfo("Test Tag", "CrossCampus");
         ExtentService.getInstance().setSystemInfo("Operating System Info", System.getProperty("os.name"));
         ExtentService.getInstance().setSystemInfo("Department", "QA");
     }

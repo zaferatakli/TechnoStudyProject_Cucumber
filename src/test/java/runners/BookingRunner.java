@@ -23,6 +23,7 @@ public class BookingRunner extends AbstractTestNGCucumberTests {
 
     @AfterClass
     public static void writeExtendReport() {
+        ExtentService.getInstance().setSystemInfo("--------------------", "--------------------");
         ExtentService.getInstance().setSystemInfo("Windows User Name", System.getProperty("user.name"));
         ExtentService.getInstance().setSystemInfo("Time Zone", System.getProperty("user.timezone"));
         ExtentService.getInstance().setSystemInfo("Browser", GWD.threadBrowserName.get());
@@ -30,6 +31,7 @@ public class BookingRunner extends AbstractTestNGCucumberTests {
         ExtentService.getInstance().setSystemInfo("User Name", "Bug Fathers");
         ExtentService.getInstance().setSystemInfo("Team Name", "Team#4");
         ExtentService.getInstance().setSystemInfo("Application Name", "TechnoStudy");
+        ExtentService.getInstance().setSystemInfo("Test Tag", "Booking");
         ExtentService.getInstance().setSystemInfo("Operating System Info", System.getProperty("os.name"));
         ExtentService.getInstance().setSystemInfo("Department", "QA");
     }

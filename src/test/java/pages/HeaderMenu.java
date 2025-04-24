@@ -58,7 +58,14 @@ public class HeaderMenu extends ParentPage {
     @FindBy(xpath = "//li[@class='t228__list_item']//a[text()='Blogs']")
     public WebElement blogsLink;
 
-    ///ana menu blogs
+    /// TC_502_Elements
+    @FindBy(xpath = "//a[text()='SIGN IN']")
+    public WebElement signInButton;
+
+    @FindBy(xpath = "//img")
+    public WebElement campusPageLogo;
+
+
 
 
     public WebElement getWebElement(String strElement) {
@@ -83,6 +90,10 @@ public class HeaderMenu extends ParentPage {
                 return this.workWithUsLink;
             case "blogsLink":
                 return this.blogsLink;
+            case "signInButton":
+                return this.signInButton;
+            case "campusPageLogo":
+                return this.campusPageLogo;
         }
         return null;
     }
