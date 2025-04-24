@@ -74,6 +74,19 @@
             <version>2.11.1</version>
         </dependency>
 
+        <!-- Log4j API  Logging API'sini sağlar.  -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.20.0</version>
+        </dependency>
+
+        <!-- Log4j Core: Gerçek logging işlemlerini gerçekleştiren uygulamadır. -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.20.0</version>
+        </dependency>
 
     </dependencies>
 </project>

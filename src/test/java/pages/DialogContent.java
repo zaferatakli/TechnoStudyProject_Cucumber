@@ -68,7 +68,7 @@ public class DialogContent extends ParentPage {
     public WebElement cookiesPolicyLink;
     ///footer menu cookies policy
 
-    @FindBy(xpath = "//span[@class='js-feed-post-date t-feed__post-date t-uptitle t-uptitle_xs']")
+    @FindBy(xpath = "//*[@class='t-feed__col-grid__post-wrapper']")
     public List<WebElement> blogsList;
 
     /// bloglarin listesi ->  blogs sayfasinda
