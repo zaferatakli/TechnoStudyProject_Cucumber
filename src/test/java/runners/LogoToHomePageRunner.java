@@ -15,8 +15,8 @@ import java.time.LocalDateTime;
 
 public class LogoToHomePageRunner extends AbstractTestNGCucumberTests {
     @BeforeClass
-    @Parameters("BrowserType")
-    public static void setUp(String browserType) {
+    @Parameters("browserType")
+    public void setUp(String browserType) {
         GWD.threadBrowserName.set(browserType);
     }
 

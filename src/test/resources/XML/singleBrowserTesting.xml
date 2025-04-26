@@ -3,7 +3,7 @@
 
 <suite name="SingleBrowserTestSuite" parallel="classes" thread-count="4">
     <test name="ChromeSingleTests">
-        <parameter name="BrowserType" value="chrome"/>
+        <parameter name="browserType" value="chrome"/>
         <classes>
             <class name="runners.BookingRunner"/>
             <class name="runners.CrossCampusRunner"/>

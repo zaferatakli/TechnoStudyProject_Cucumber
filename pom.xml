@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
@@ -47,25 +47,24 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.12.0</version>
         </dependency>
-
+        <!--SLF4J-nop info disable -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-nop</artifactId>
             <version>2.0.17</version>
             <scope>test</scope>
         </dependency>
-
+        <!--extendreparts for cucumber-->
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
             <version>1.10.1</version>
         </dependency>
-
-        <!--        pdf report-->
+        <!--pdf report-->
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
             <artifactId>pdfbox</artifactId>
-            <version>2.0.24</version> <!-- log'da görünen sürüm -->
+            <version>2.0.24</version>
         </dependency>
 
         <dependency>
@@ -79,30 +78,25 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-        <!-- Log4j API  Logging API'sini sağlar.  -->
+        <!--Log4j API  Provides the Logging API.  -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>2.20.0</version>
         </dependency>
-
-        <!-- Log4j Core: Gerçek logging işlemlerini gerçekleştiren uygulamadır. -->
+        <!--Log4j Core: It is the application that performs real logging operations. -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.20.0</version>
         </dependency>
-
         <!-- Extent Core -->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>5.0.9</version>
         </dependency>
-
     </dependencies>
-
     <build>
         <resources>
             <resource>

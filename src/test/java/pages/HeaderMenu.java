@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import utilities.GWD;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.and;
 
 public class HeaderMenu extends ParentPage {
     public Actions action;
@@ -65,35 +66,17 @@ public class HeaderMenu extends ParentPage {
     @FindBy(xpath = "//img")
     public WebElement campusPageLogo;
 
-    public void clickMenuItemAndReturn(WebElement menuItem, String getExpectedUrl) {
-        GWD.getWait().until(ExpectedConditions.visibilityOf(menuItem));
-        GWD.getWait().until(ExpectedConditions.elementToBeClickable(menuItem));
-
-        String currentUrl = GWD.getDriver().getCurrentUrl();
-
-        if (!currentUrl.equals(getExpectedUrl)) {
-            ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].scrollIntoView(true);", menuItem);
-            ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].removeAttribute('target')", menuItem);
-            ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].click();", menuItem);
-
-            GWD.getWait().until(ExpectedConditions.urlToBe(getExpectedUrl));
-            Assert.assertEquals(GWD.getDriver().getCurrentUrl(), getExpectedUrl, "URL is not as expected after clicking the menu item");
-        }
-
+    public void clickToLogoCheckHomePage() {
         GWD.getWait().until(ExpectedConditions.visibilityOf(logo));
-        GWD.getWait().until(ExpectedConditions.elementToBeClickable(logo));
-
-//        GWD.getWait().until(ExpectedConditions.visibilityOf(menuItem));
-//        GWD.getWait().until(ExpectedConditions.elementToBeClickable(menuItem));
-//        ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].scrollIntoView(true);", menuItem);
-//        ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].removeAttribute('target')", menuItem);
-//        ((JavascriptExecutor) GWD.getDriver()).executeScript("arguments[0].click();", menuItem);
-//
-//        GWD.getWait().until(ExpectedConditions.urlToBe(GWD.getDriver().getCurrentUrl()));
-//
-//        Assert.assertEquals(GWD.getDriver().getCurrentUrl(), getExpectedUrl, "URL is not as expected after clicking the menu item");
-//
-//        GWD.getWait().until(ExpectedConditions.visibilityOf(logo));
-//        GWD.getWait().until(ExpectedConditions.elementToBeClickable(logo));
+        and(ExpectedConditions.elementToBeClickable(logo));
+        Assert.assertTrue(logo.isDisplayed());
+        logo.click();
+        GWD.getWait().until(ExpectedConditions.visibilityOf(logo));
+        and(ExpectedConditions.elementToBeClickable(logo));
+        Assert.assertTrue(logo.isDisplayed());
+    }
+    public void clickToBlogsLink() {
+        GWD.getWait().until(ExpectedConditions.elementToBeClickable(blogsLink));
+        blogsLink.click();
     }
 }
