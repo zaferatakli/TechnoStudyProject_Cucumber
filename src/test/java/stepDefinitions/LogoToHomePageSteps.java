@@ -22,7 +22,6 @@ public class LogoToHomePageSteps {
     @Given("The user navigates to the homepage")
     public void theUserNavigatesToTheHomepage() {
         GWD.getDriver().get(ConfigReader.getProperty("homePageUrl"));
-
         String actualUrl = GWD.getDriver().getCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl, "URL is not as expected");
     }
@@ -100,7 +99,6 @@ public class LogoToHomePageSteps {
         hm.action.moveToElement(hm.mastersProgramLink).click().build().perform();
         GWD.getWait().until(ExpectedConditions.urlToBe(ConfigReader.getProperty("mastersProgramUrl")));
         Assert.assertEquals(GWD.getDriver().getCurrentUrl(), ConfigReader.getProperty("mastersProgramUrl"), "URL is not as expected after clicking the Masters Program link");
-
     }
 
     @Then("The user clicks on the About Us link and should be redirected to the correct page")
