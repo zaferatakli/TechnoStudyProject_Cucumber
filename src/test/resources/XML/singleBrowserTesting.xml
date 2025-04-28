@@ -5,13 +5,13 @@
     <test name="ChromeSingleTests">
         <parameter name="browserType" value="chrome"/>
         <classes>
+            <class name="runners.BlogPageRunner"/>
             <class name="runners.BookingRunner"/>
             <class name="runners.CrossCampusRunner"/>
             <class name="runners.DropDownMenuRunner"/>
             <class name="runners.LogoToHomePageRunner"/>
             <class name="runners.SubmenuSocialMediaRunner"/>
             <class name="runners.TermsOfUseRunner"/>
-
         </classes>
     </test>
 </suite>
