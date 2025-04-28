@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -31,23 +32,25 @@ public class GWD {
                 case "firefox":
                     threadDriver.set(new FirefoxDriver());
                     break;
+                case "safari":
+                    threadDriver.set(new SafariDriver());
+                    break;
                 default:
                     threadDriver.set(new ChromeDriver());
             }
             threadDriver.get().manage().window().maximize();
-            threadDriver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-
+            threadDriver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(ConfigReader.getIntProperty("pageLoadTimeout")));
         }
         return threadDriver.get();
     }
 
     public static WebDriverWait getWait() {
-        return new WebDriverWait(getDriver(), Duration.ofSeconds(20));
+        return new WebDriverWait(getDriver(), Duration.ofSeconds(ConfigReader.getIntProperty("explicitWait")));
     }
 
     public static void quitDriver() {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

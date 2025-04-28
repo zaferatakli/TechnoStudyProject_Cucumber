@@ -13,3 +13,8 @@ detailedStepHookConfig:
   errorMsgColor: "#ff0000"
   logMsgColor: "#009900"
   defaultCount: 10
+
+# Optionally add overallSummaryConfig
+overallSummaryConfig:
+  title: "Test Summary"
+  titleColor: "#123456"
