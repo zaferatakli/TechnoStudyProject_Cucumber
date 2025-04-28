@@ -14,15 +14,11 @@ public class SubmenuSocialMediaSteps {
 
     @When("Scroll to the dropdown menu social area")
     public void scrollToTheDropdownMenuSocialArea() {
-
         dc.scrollToElement(dc.socialLinkField);
-
-
     }
 
     @Then("Click on all social media menu links.")
     public void clickOnAllSocialMediaMenuLinks() {
-
         String technoStudyWindowID = GWD.getDriver().getWindowHandle();
         String[] socialList = {"facebook", "instagram", "youtube", "linkedin"};
         List<WebElement> socialLinkList = dc.getWebElementList("socialLinks");
@@ -43,10 +39,5 @@ public class SubmenuSocialMediaSteps {
             GWD.getDriver().close();
             GWD.getDriver().switchTo().window(technoStudyWindowID);
         }
-
-
-
-
-
     }
 }
