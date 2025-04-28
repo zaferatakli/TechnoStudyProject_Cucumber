@@ -96,6 +96,12 @@ public class DialogContent extends ParentPage {
     @FindBy(xpath = "//*[@class='t-feed__col-grid__post-wrapper']")
     public List<WebElement> blogsList;
 
+    @FindBy(xpath = "//strong[text()='Terms of Use']")
+    public WebElement termsOfUsePageTitle;
+
+    @FindBy(xpath = "(//a[text()='Terms of Use'])[1]")
+    public WebElement termsOfUseForm;
+
     /// bloglarin listesi ->  blogs sayfasinda
     public List<WebElement> getWebElementList(String strElement) {
         switch (strElement) {
