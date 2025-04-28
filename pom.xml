@@ -103,6 +103,7 @@
                 <directory>src/test/resources</directory>
                 <includes>
                     <include>**/*.yaml</include>
+                    <include>**/*.properties</include>
                     <include>**/*.ttf</include>
                 </includes>
             </resource>
