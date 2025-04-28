@@ -70,13 +70,14 @@ public class HeaderMenu extends ParentPage {
         GWD.getWait().until(ExpectedConditions.visibilityOf(logo));
         and(ExpectedConditions.elementToBeClickable(logo));
         Assert.assertTrue(logo.isDisplayed());
-        logo.click();
+        myClick(logo);
         GWD.getWait().until(ExpectedConditions.visibilityOf(logo));
         and(ExpectedConditions.elementToBeClickable(logo));
         Assert.assertTrue(logo.isDisplayed());
     }
+
     public void clickToBlogsLink() {
         GWD.getWait().until(ExpectedConditions.elementToBeClickable(blogsLink));
-        blogsLink.click();
+        myClick(blogsLink);
     }
 }

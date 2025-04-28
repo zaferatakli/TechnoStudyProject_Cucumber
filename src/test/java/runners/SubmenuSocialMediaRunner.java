@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 public class SubmenuSocialMediaRunner extends AbstractTestNGCucumberTests {
 
     @BeforeClass
-    @Parameters("BrowserType")
+    @Parameters("browserType")
     public static void setUp(String browserType) {
         GWD.threadBrowserName.set(browserType);
     }

@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
 public class LogoToHomePageRunner extends AbstractTestNGCucumberTests {
+
     @BeforeClass
     @Parameters("browserType")
     public void setUp(String browserType) {
