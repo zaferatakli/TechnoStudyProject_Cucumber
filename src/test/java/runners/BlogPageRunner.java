@@ -8,13 +8,9 @@ import utilities.GWD;
 
 import java.time.LocalDateTime;
 
-@CucumberOptions(
-        features = {"src/test/java/featureFiles/BlogPage.feature"},
-        glue = {"stepDefinitions"},
-        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
+@CucumberOptions(features = {"src/test/java/featureFiles/BlogPage.feature"}, glue = {"stepDefinitions"}, plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
 public class BlogPageRunner extends AbstractTestNGCucumberTests {
-
     @BeforeClass
     @Parameters("browserType")
     public static void setUp(String browserType) {

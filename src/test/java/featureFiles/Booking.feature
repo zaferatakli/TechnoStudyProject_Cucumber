@@ -1,8 +1,10 @@
 Feature:  Techno Study - Booking Application Form
 
+  Background:
+    Given The user navigates to the homepage
+    And The user accepts cookies
+
   Scenario: User submits a booking request successfully
-    Given the user navigate the website
-    And the user accepts cookies
     And the Apply Now button is clearly visible
 
     When the user clicks the Apply Now button

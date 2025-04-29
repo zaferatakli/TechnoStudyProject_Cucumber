@@ -49,4 +49,3 @@ public class DropDownMenuSteps {
         Assert.assertTrue(dc.masterHomepage.isDisplayed(), "No text found");
     }
 }
-

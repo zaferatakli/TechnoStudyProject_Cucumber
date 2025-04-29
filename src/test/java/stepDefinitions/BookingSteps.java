@@ -1,9 +1,6 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -99,9 +96,8 @@ public class BookingSteps {
 
     @Then("a confirmation message is displayed")
     public void aConfirmationMessageIsDisplayed() {
-        dc.action.pause(Duration.ofSeconds(30)).build().perform();
+        dc.action.pause(Duration.ofSeconds(20)).build().perform(); // captcha is held for manual switching.
         GWD.getWait().until(ExpectedConditions.visibilityOf(dc.thankYouMessage));
         Assert.assertTrue(dc.thankYouMessage.isDisplayed());
     }
 }
-

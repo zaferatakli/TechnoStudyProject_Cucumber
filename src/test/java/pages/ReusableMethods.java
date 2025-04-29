@@ -6,10 +6,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import utilities.GWD;
 
-public class ParentPage {
+public class ReusableMethods {
     public Actions action;
 
-    public ParentPage() {
+    public ReusableMethods() {
         action = new Actions(GWD.getDriver());
     }
 
