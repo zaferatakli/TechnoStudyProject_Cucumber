@@ -96,7 +96,7 @@ public class BookingSteps {
 
     @Then("a confirmation message is displayed")
     public void aConfirmationMessageIsDisplayed() {
-        dc.action.pause(Duration.ofSeconds(20)).build().perform(); // captcha is held for manual switching.
+        dc.action.pause(Duration.ofSeconds(40)).build().perform(); // captcha is held for manual switching.
         GWD.getWait().until(ExpectedConditions.visibilityOf(dc.thankYouMessage));
         Assert.assertTrue(dc.thankYouMessage.isDisplayed());
     }

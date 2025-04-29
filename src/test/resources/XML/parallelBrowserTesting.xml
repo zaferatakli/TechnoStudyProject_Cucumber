@@ -7,6 +7,7 @@
         <classes>
             <class name="runners.BlogPageRunner"/>
             <class name="runners.BookingRunner"/>
+            <class name="runners.CourseDetailsRunner"/>
             <class name="runners.CrossCampusRunner"/>
             <class name="runners.DropDownMenuRunner"/>
             <class name="runners.LogoToHomePageRunner"/>
@@ -19,6 +20,7 @@
         <classes>
             <class name="runners.BlogPageRunner"/>
             <class name="runners.BookingRunner"/>
+            <class name="runners.CourseDetailsRunner"/>
             <class name="runners.CrossCampusRunner"/>
             <class name="runners.DropDownMenuRunner"/>
             <class name="runners.LogoToHomePageRunner"/>

@@ -91,6 +91,12 @@ public class DialogContent extends ReusableMethods {
     @FindBy(xpath = "(//a[text()='Terms of Use'])[1]")
     public WebElement termsOfUseForm;
 
+    @FindBy(xpath = "//h2[text()='Choose a program']")
+    public WebElement chooseProgramTitle;
+
+    @FindBy(xpath = "//a[text()='Learn more']")
+    public List<WebElement> learnMoreButtons;
+
     public List<WebElement> getWebElementList(String strElement) {
         switch (strElement) {
             case "blogsList":
