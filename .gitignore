@@ -6,7 +6,5 @@ target/
 .idea/
 *.iml
 workspace.xml
-test-output/
-SparkReport/
-/Test Reports/
 !/configuration.properties
+!/target/

@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
 public class CourseDetailsRunner extends AbstractTestNGCucumberTests {
-
     @BeforeClass
     @Parameters("browserType")
     public static void setUp(String browserType) {
