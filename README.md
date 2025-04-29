@@ -181,14 +181,13 @@ Maven will automatically download the necessary libraries.
 
 ## 👥 Project Team
 
-| Name         | Role                   | Stories        |
-|:-------------|:-----------------------|:---------------|
-| Zafer Ataklı | QA Lead                | US_506, US_507 |
-| Tugba Kılıç  | QA Automation Engineer | US_502, US_508 |
-| Nuri Öztürk  | QA Automation Engineer | US_503         |
-| Rıfat Batır  | QA Automation Engineer | US_505         |
-| Azim Korkmaz | QA Automation Engineer | US_504         |
-| Yiğit Çam    | QA Automation Engineer | US_501         |
+| Name         | Role                   | Stories                |
+|:-------------|:-----------------------|:-----------------------|
+| Zafer Ataklı | QA Lead                | US_501, US_506, US_507 |
+| Tugba Kılıç  | QA Automation Engineer | US_502, US_508         |
+| Nuri Öztürk  | QA Automation Engineer | US_503                 |
+| Rıfat Batır  | QA Automation Engineer | US_505                 |
+| Azim Korkmaz | QA Automation Engineer | US_504                 |
 
 ---
 
@@ -200,11 +199,9 @@ Maven will automatically download the necessary libraries.
 
 - [Zafer Ataklı](https://github.com/zaferatakli)
 - [Tugba Kılıç](https://github.com/TugbaKilic33)
-- [Yiğit Çam](https://github.com/Yigit-Cam)
 - [Rıfat Batır](https://github.com/rftbtr)
 - [Azim Korkmaz](https://github.com/AzimKorkmaz)
 - [Nuri Öztürk](https://github.com/NuriOzturk)
-
 
 ---
 
