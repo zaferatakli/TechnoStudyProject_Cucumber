@@ -1,0 +1,2304 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Apr 30, 2025 02:37:25 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Techno Study - Blogs Page Test</p>
+            <p class="text-sm">
+              <span>2:37:26 AM</span> / <span>00:02:38:712</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Techno Study - Blogs Page Test</h5>
+<span class='badge badge-success'>04.30.2025 2:37:26 AM</span>
+<span class='badge badge-danger'>04.30.2025 2:40:04 AM</span>
+<span class='badge badge-default'>00:02:38:712</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>User clicks on each blog post and returns to homepage</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheBlogsLink()">
+                <span>When The user clicks on the Blogs link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksEachOfTheAllBlogPostsAsIndexAndVerifiesThePageLoadsCorrectly()">
+                <span>Then The user clicks each of the all blog posts and verifies the page loads correctly</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Techno Study - Blogs Page Test</p>
+            <p class="text-sm">
+              <span>2:37:26 AM</span> / <span>00:02:37:033</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Techno Study - Blogs Page Test</h5>
+<span class='badge badge-success'>04.30.2025 2:37:26 AM</span>
+<span class='badge badge-danger'>04.30.2025 2:40:03 AM</span>
+<span class='badge badge-default'>00:02:37:033</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="4"><span class="badge log pass-bg mr-2">Pass</span>User clicks on each blog post and returns to homepage</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheBlogsLink()">
+                <span>When The user clicks on the Blogs link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksEachOfTheAllBlogPostsAsIndexAndVerifiesThePageLoadsCorrectly()">
+                <span>Then The user clicks each of the all blog posts and verifies the page loads correctly</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Techno Study - Booking Application Form</p>
+            <p class="text-sm">
+              <span>2:40:05 AM</span> / <span>00:00:52:444</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Techno Study - Booking Application Form</h5>
+<span class='badge badge-success'>04.30.2025 2:40:05 AM</span>
+<span class='badge badge-danger'>04.30.2025 2:40:58 AM</span>
+<span class='badge badge-default'>00:00:52:444</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="16"><span class="badge log pass-bg mr-2">Pass</span>User submits a booking request successfully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BookingSteps.theButtonIsClearlyVisible()">
+                <span>And the Apply Now button is clearly visible</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BookingSteps.theUserClicksTheButton()">
+                <span>When the user clicks the Apply Now button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BookingSteps.theApplicationFormPageIsDisplayed()">
+                <span>Then the application form page is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BookingSteps.theUserFillsInTheFormWithTheFollowingDetails()">
+                <span>When the user fills in the form with the following details:</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BookingSteps.theUserClickTheTermsOfUseCheckbox()">
+                <span>And the user click the terms of use checkbox</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BookingSteps.theUserClicksTheBookACallButton()">
+                <span>And the user clicks the Book a Call button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BookingSteps.aConfirmationMessageIsDisplayed()">
+                <span>Then a confirmation message is displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>User submits a booking request successfully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BookingSteps.theButtonIsClearlyVisible()">
+                <span>And the Apply Now button is clearly visible</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BookingSteps.theUserClicksTheButton()">
+                <span>When the user clicks the Apply Now button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BookingSteps.theApplicationFormPageIsDisplayed()">
+                <span>Then the application form page is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BookingSteps.theUserFillsInTheFormWithTheFollowingDetails()">
+                <span>When the user fills in the form with the following details:</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BookingSteps.theUserClickTheTermsOfUseCheckbox()">
+                <span>And the user click the terms of use checkbox</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BookingSteps.theUserClicksTheBookACallButton()">
+                <span>And the user clicks the Book a Call button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.BookingSteps.aConfirmationMessageIsDisplayed()">
+                <span>Then a confirmation message is displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="38"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Techno Study - Course Details Page Test</p>
+            <p class="text-sm">
+              <span>2:40:56 AM</span> / <span>00:00:17:282</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Techno Study - Course Details Page Test</h5>
+<span class='badge badge-success'>04.30.2025 2:40:56 AM</span>
+<span class='badge badge-danger'>04.30.2025 2:41:13 AM</span>
+<span class='badge badge-default'>00:00:17:282</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=38</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="39"><span class="badge log pass-bg mr-2">Pass</span>Course Details page access from the homepage</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.CourseDetailsSteps.theUserScrollsDownThePageOneTheCoursesSection()">
+                <span>When The user scrolls down the page one the courses section</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.CourseDetailsSteps.theUserClicksOnTheButtonEachCourseAndShouldBeRedirectedToTheCourseDetailsPage(java.lang.String)">
+                <span>And The user clicks on the "Learn More" button each course and should be redirected to the course details page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="41"><span class="badge log pass-bg mr-2">Pass</span>Course Details page access from the homepage</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.CourseDetailsSteps.theUserScrollsDownThePageOneTheCoursesSection()">
+                <span>When The user scrolls down the page one the courses section</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.CourseDetailsSteps.theUserClicksOnTheButtonEachCourseAndShouldBeRedirectedToTheCourseDetailsPage(java.lang.String)">
+                <span>And The user clicks on the "Learn More" button each course and should be redirected to the course details page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="51"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Techno Study - Campus Sing in Button Test</p>
+            <p class="text-sm">
+              <span>2:41:11 AM</span> / <span>00:00:15:182</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Techno Study - Campus Sing in Button Test</h5>
+<span class='badge badge-success'>04.30.2025 2:41:11 AM</span>
+<span class='badge badge-danger'>04.30.2025 2:41:26 AM</span>
+<span class='badge badge-default'>00:00:15:182</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=51</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="52"><span class="badge log pass-bg mr-2">Pass</span>First load - verify homepage and accept cookies</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theLogoShouldBeVisibleAndClickable()">
+                <span>And The logo should be visible and clickable</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.CrossCampusSteps.theUserClicksOnTheSignInButton()">
+                <span>When The user clicks on the sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.CrossCampusSteps.theUserShouldBeRedirectedToTheSignInPageOfTheCampus()">
+                <span>Then The user should be redirected to the sign in page of the Campus</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="54"><span class="badge log pass-bg mr-2">Pass</span>First load - verify homepage and accept cookies</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theLogoShouldBeVisibleAndClickable()">
+                <span>And The logo should be visible and clickable</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.CrossCampusSteps.theUserClicksOnTheSignInButton()">
+                <span>When The user clicks on the sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.CrossCampusSteps.theUserShouldBeRedirectedToTheSignInPageOfTheCampus()">
+                <span>Then The user should be redirected to the sign in page of the Campus</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="66"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TechnoStudy - Programs dropdown menu on homepage</p>
+            <p class="text-sm">
+              <span>2:41:24 AM</span> / <span>00:00:18:760</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TechnoStudy - Programs dropdown menu on homepage</h5>
+<span class='badge badge-success'>04.30.2025 2:41:24 AM</span>
+<span class='badge badge-danger'>04.30.2025 2:41:43 AM</span>
+<span class='badge badge-default'>00:00:18:760</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=66</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="67"><span class="badge log pass-bg mr-2">Pass</span>User can access all course pages from the Programs dropdown</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.DropDownMenuSteps.theUserHoversOverTheProgramsMenu()">
+                <span>When The user hovers over the Programs menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.DropDownMenuSteps.theUserShouldBeNavigatedToTheCorrectCoursePage()">
+                <span>Then The user should be see the all programs link and selects each page and navigated to the correct course page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="69"><span class="badge log pass-bg mr-2">Pass</span>User can access all course pages from the Programs dropdown</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.DropDownMenuSteps.theUserHoversOverTheProgramsMenu()">
+                <span>When The user hovers over the Programs menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.DropDownMenuSteps.theUserShouldBeNavigatedToTheCorrectCoursePage()">
+                <span>Then The user should be see the all programs link and selects each page and navigated to the correct course page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="79"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Techno Study - Homepage and Menu Navigation Test</p>
+            <p class="text-sm">
+              <span>2:41:40 AM</span> / <span>00:03:19:600</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Techno Study - Homepage and Menu Navigation Test</h5>
+<span class='badge badge-success'>04.30.2025 2:41:40 AM</span>
+<span class='badge badge-danger'>04.30.2025 2:44:59 AM</span>
+<span class='badge badge-default'>00:03:19:600</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=79</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="80"><span class="badge log pass-bg mr-2">Pass</span>First load - verify homepage and accept cookies</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theLogoShouldBeVisibleAndClickable()">
+                <span>And The logo should be visible and clickable</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheLogo()">
+                <span>When The user clicks on the Logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldBeRedirectedToTheHomepage()">
+                <span>Then The user should be redirected to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheProgramsSDETLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Programs > SDET link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheProgramsDataScienceLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Programs > Data Science link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheProgramsAILinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Programs > AI link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheProgramsAndroidDeveloperLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Programs > Android Developer link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheAboutUsLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the About Us link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheWorkWithUsLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Work With Us link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheApplyNowButtonAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Apply Now button and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheCodingBootcampLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Coding Bootcamp link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserScrollsDownThePage()">
+                <span>When The user scrolls down the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheTermsOfUseLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Terms of Use link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserScrollsDownThePage()">
+                <span>When The user scrolls down the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnThePrivacyPolicyLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Privacy Policy link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserScrollsDownThePage()">
+                <span>When The user scrolls down the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheCookiesPolicyLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Cookies Policy link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheProgramsMastersProgramLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Programs > Masters Program link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="82"><span class="badge log pass-bg mr-2">Pass</span>First load - verify homepage and accept cookies</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theLogoShouldBeVisibleAndClickable()">
+                <span>And The logo should be visible and clickable</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheLogo()">
+                <span>When The user clicks on the Logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldBeRedirectedToTheHomepage()">
+                <span>Then The user should be redirected to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheProgramsSDETLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Programs > SDET link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheProgramsDataScienceLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Programs > Data Science link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheProgramsAILinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Programs > AI link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheProgramsAndroidDeveloperLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Programs > Android Developer link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheAboutUsLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the About Us link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheWorkWithUsLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Work With Us link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheApplyNowButtonAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Apply Now button and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheCodingBootcampLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Coding Bootcamp link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserScrollsDownThePage()">
+                <span>When The user scrolls down the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheTermsOfUseLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Terms of Use link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserScrollsDownThePage()">
+                <span>When The user scrolls down the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnThePrivacyPolicyLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Privacy Policy link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserScrollsDownThePage()">
+                <span>When The user scrolls down the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheCookiesPolicyLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Cookies Policy link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheProgramsMastersProgramLinkAndShouldBeRedirectedToTheCorrectPage()">
+                <span>Then The user clicks on the Programs > Masters Program link and should be redirected to the correct page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserShouldReturnToTheHomepageByClickingTheLogo()">
+                <span>And The user should return to the homepage by clicking the logo</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="146"><span class="badge log pass-bg mr-2">Pass</span>User clicks on each blog post and returns to homepage</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheBlogsLink()">
+                <span>When The user clicks on the Blogs link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksEachOfTheAllBlogPostsAsIndexAndVerifiesThePageLoadsCorrectly()">
+                <span>Then The user clicks each of the all blog posts and verifies the page loads correctly</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="153"><span class="badge log pass-bg mr-2">Pass</span>User clicks on each blog post and returns to homepage</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksOnTheBlogsLink()">
+                <span>When The user clicks on the Blogs link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserClicksEachOfTheAllBlogPostsAsIndexAndVerifiesThePageLoadsCorrectly()">
+                <span>Then The user clicks each of the all blog posts and verifies the page loads correctly</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="159"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Techno Study - Social Media Referral Test</p>
+            <p class="text-sm">
+              <span>2:44:53 AM</span> / <span>00:00:26:302</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Techno Study - Social Media Referral Test</h5>
+<span class='badge badge-success'>04.30.2025 2:44:53 AM</span>
+<span class='badge badge-danger'>04.30.2025 2:45:19 AM</span>
+<span class='badge badge-default'>00:00:26:302</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=159</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="160"><span class="badge log pass-bg mr-2">Pass</span>The user goes to the social menu section in the bottom menu and clicks on the social links.</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SubmenuSocialMediaSteps.scrollToTheDropdownMenuSocialArea()">
+                <span>When Scroll to the dropdown menu social area</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SubmenuSocialMediaSteps.clickOnAllSocialMediaMenuLinks()">
+                <span>Then Click on all social media menu links.</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="166"><span class="badge log pass-bg mr-2">Pass</span>The user goes to the social menu section in the bottom menu and clicks on the social links.</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SubmenuSocialMediaSteps.scrollToTheDropdownMenuSocialArea()">
+                <span>When Scroll to the dropdown menu social area</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.SubmenuSocialMediaSteps.clickOnAllSocialMediaMenuLinks()">
+                <span>Then Click on all social media menu links.</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="172"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Techno Study - Apply Now Form Terms Of Use Link Test</p>
+            <p class="text-sm">
+              <span>2:45:13 AM</span> / <span>00:00:25:324</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Techno Study - Apply Now Form Terms Of Use Link Test</h5>
+<span class='badge badge-success'>04.30.2025 2:45:13 AM</span>
+<span class='badge badge-danger'>04.30.2025 2:45:38 AM</span>
+<span class='badge badge-default'>00:00:25:324</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=172</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="173"><span class="badge log fail-bg mr-2">Fail</span>Check Terms of Use link inside Apply Now form</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.TermsOfUseSteps.theUserClicksTheApplyNowButton()">
+                <span>When The user clicks the Apply Now button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.TermsOfUseSteps.theUserSeesTheForm()">
+                <span>And The user sees the form</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.TermsOfUseSteps.theUserClicksTheTermsOfUseLink()">
+                <span>And The user clicks the Terms of Use link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.TermsOfUseSteps.theUserShouldBeRedirectedToTheTermsOfUsePage()">
+                <span>Then The user should be redirected to the Terms of Use page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.TermsOfUseSteps.thePageTitleShouldBeTermsOfUse()">
+                <span>And The page title should be Terms of Use</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //strong[text()='Terms of Use']' (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at stepDefinitions.TermsOfUseSteps.thePageTitleShouldBeTermsOfUse(TermsOfUseSteps.java:46)
+	at ✽.The page title should be Terms of Use(file:///C:/Users/User/IdeaProjects/TechnoStudyProject_Cucumber/src/test/java/featureFiles/TermsOfUse.feature:13)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//strong[text()='Terms of Use']"}
+  (Session info: chrome=135.0.7049.115)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [02305919966af77c60b5cbaf0f8d29c9, findElement {using=xpath, value=//strong[text()='Terms of Use']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64586}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64586/devtoo..., se:cdpVersion: 135.0.7049.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 02305919966af77c60b5cbaf0f8d29c9
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 2 more
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>stepDefinitions.Hooks.after(io.cucumber.java.Scenario)</span>
+      <div>screenshot name
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshots/embedded1.png' src="../screenshots/embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="182"><span class="badge log fail-bg mr-2">Fail</span>Check Terms of Use link inside Apply Now form</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserNavigatesToTheHomepage()">
+                <span>Given The user navigates to the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LogoToHomePageSteps.theUserAcceptsCookies()">
+                <span>And The user accepts cookies</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.TermsOfUseSteps.theUserClicksTheApplyNowButton()">
+                <span>When The user clicks the Apply Now button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.TermsOfUseSteps.theUserSeesTheForm()">
+                <span>And The user sees the form</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.TermsOfUseSteps.theUserClicksTheTermsOfUseLink()">
+                <span>And The user clicks the Terms of Use link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.TermsOfUseSteps.theUserShouldBeRedirectedToTheTermsOfUsePage()">
+                <span>Then The user should be redirected to the Terms of Use page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.TermsOfUseSteps.thePageTitleShouldBeTermsOfUse()">
+                <span>And The page title should be Terms of Use</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //strong[text()='Terms of Use']' (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at stepDefinitions.TermsOfUseSteps.thePageTitleShouldBeTermsOfUse(TermsOfUseSteps.java:46)
+	at ✽.The page title should be Terms of Use(file:///C:/Users/User/IdeaProjects/TechnoStudyProject_Cucumber/src/test/java/featureFiles/TermsOfUse.feature:13)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//strong[text()='Terms of Use']"}
+  (Session info: MicrosoftEdge=135.0.3179.98)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2903c3c45b1ac63ed2c445bcf561faf0, findElement {using=xpath, value=//strong[text()='Terms of Use']}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 135.0.3179.98, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:64652}, msedge: {msedgedriverVersion: 135.0.3179.98 (4215a10badb6..., userDataDir: C:\Users\User\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64652/devtoo..., se:cdpVersion: 135.0.3179.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2903c3c45b1ac63ed2c445bcf561faf0
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 2 more
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>stepDefinitions.Hooks.after(io.cucumber.java.Scenario)</span>
+      <div>screenshot name
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshots/embedded2.png' src="../screenshots/embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">org.openqa.selenium.TimeoutException</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.TimeoutException</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:45:17 AM</td>
+<td>
+<a href="#" class="linked" test-id='172' id='181'>And The page title should be Terms of Use</a>
+<div class="">
+<span class="badge badge-default">Techno Study - Apply Now Form Terms Of Use Link Test.Check Terms of Use link inside Apply Now form.And The page title should be Terms of Use</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:45:24 AM</td>
+<td>
+<a href="#" class="linked" test-id='172' id='189'>And The page title should be Terms of Use</a>
+<div class="">
+<span class="badge badge-default">Techno Study - Apply Now Form Terms Of Use Link Test.Check Terms of Use link inside Apply Now form.And The page title should be Terms of Use</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Apr 30, 2025 02:37:25 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Apr 30, 2025 02:45:38 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>8</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='88%'>
+<b>8</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='11%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='88%'><b>16</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='11%'><b>2</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='98%'><b>146</b> steps passed</small></div>
+<div>
+<small data-tooltip='1%'><b>2</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Techno Study - Blogs Page Test":158.712,"Techno Study - Blogs Page Test":157.033,"Techno Study - Booking Application Form":52.444,"Techno Study - Course Details Page Test":17.282,"Techno Study - Campus Sing in Button Test":15.182,"TechnoStudy - Programs dropdown menu on homepage":18.76,"Techno Study - Homepage and Menu Navigation Test":199.6,"Techno Study - Social Media Referral Test":26.302,"Techno Study - Apply Now Form Terms Of Use Link Test":25.324
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>chrome</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:40:03.226170500</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>BlogPage</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>edge</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:40:04.896760600</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>BlogPage</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>chrome</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:40:56.466285400</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>Booking</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>edge</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:40:58.262864700</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>Booking</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>chrome</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:41:11.770713600</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>CourseDetails</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>edge</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:41:13.803520400</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>CourseDetails</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>chrome</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:41:24.681719900</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>CrossCampus</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>edge</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:41:27.000726900</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>CrossCampus</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>chrome</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:41:40.070388700</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>DropdownMenu</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>edge</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:41:43.493790800</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>DropdownMenu</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>chrome</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:44:53.184958800</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>LogoToHomePage</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>edge</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:44:59.738604500</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>LogoToHomePage</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>chrome</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:45:13.480036300</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>SubmenuSocialMedia</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>edge</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:45:19.532800600</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>SubmenuSocialMedia</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>chrome</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:45:32.320921400</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>TermsOfUse</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>--------------------</td>
+<td>--------------------</td>
+</tr>
+<tr>
+<td>Windows User Name</td>
+<td>User</td>
+</tr>
+<tr>
+<td>Time Zone</td>
+<td>Australia/Sydney</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>edge</td>
+</tr>
+<tr>
+<td>Execution Date</td>
+<td>2025-04-30T02:45:38.853530100</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Bug Fathers</td>
+</tr>
+<tr>
+<td>Team Name</td>
+<td>Team#4</td>
+</tr>
+<tr>
+<td>Application Name</td>
+<td>TechnoStudy</td>
+</tr>
+<tr>
+<td>Test Tag</td>
+<td>TermsOfUse</td>
+</tr>
+<tr>
+<td>Operating System Info</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Department</td>
+<td>QA</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 8,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 16,
+failChild: 2,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 146,
+failGrandChild: 2,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
