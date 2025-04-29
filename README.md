@@ -63,7 +63,7 @@ TechnoStudyProject_Cucumber/
 │           ├── extent.properties 
 │           └── XML/                             # XML configurations for testing
 ├── bugReports/
-│   └── US_508_TermsOfUseBugReport.png           # Bug report for Terms of Use page
+│   └── TC_508BugReport.pdf           # Bug report for Terms of Use page
 │
 ├── Test Reports/
 │   └── test-output/
