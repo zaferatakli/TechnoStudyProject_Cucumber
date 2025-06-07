@@ -65,10 +65,6 @@ TechnoStudyProject_Cucumber/
 ├── bugReports/
 │   └── TC_508BugReport.pdf           # Bug report for Terms of Use page
 │
-├── Test Reports/
-│   └── test-output/
-│           ├── PdfReport/
-│           └── SparkReport/
 │   
 ├── .gitignore
 ├── configuration.properties
